@@ -10,3 +10,13 @@ jobs:
             #     echo "cloning repo to the ubuntu server"
             #     echo "${{toJson(github)}}"
             #     git clone https://github.com/${{github.repository}}.git
+            - name: Install NodeJS to run test
+              uses: actions/setup-node@v4
+              with:
+                node-version: 20
+            - name: Print NodeJS version
+              run: node -v
+            - name: Install Dependencies
+              run: npm ci
+            - name: Run Test
+              run: npm run test
