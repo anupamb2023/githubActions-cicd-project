@@ -8,4 +8,4 @@ jobs:
               run: |
                 echo "cloning repo to the ubuntu server"
                 echo "${{toJson(github)}}"
-                git clone https://github.com/${{github.repository}}/githubActions-cicd-project.git
+                git clone https://github.com/${{github.repository}}.git
